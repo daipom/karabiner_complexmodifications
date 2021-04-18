@@ -2,7 +2,7 @@
   "title": "myvim while pushing eisu key",
   "rules": [
     {
-      "description": "eisu to vim_mode, r_command to eisu",
+      "description": "eisu to vim_mode, kana to toggle ja/en.",
       "manipulators": [
         {
           "type": "basic",
@@ -17,12 +17,24 @@
           ]
         },
         {
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "ja"
+                }
+              ]
+            }
+          ],
           "type": "basic",
           "from": {
-            "key_code": "right_command"
+            "key_code": "japanese_kana"
           },
           "to": [
-            { "key_code": "japanese_eisuu" }
+            {
+              "key_code": "japanese_eisuu"
+            }
           ]
         }
       ]
@@ -418,6 +430,20 @@
               "type": "variable_if",
               "value": 1
             }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "right_command to eisu",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_command"
+          },
+          "to": [
+            { "key_code": "japanese_eisuu" }
           ]
         }
       ]
