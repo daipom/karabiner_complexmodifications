@@ -447,6 +447,35 @@
           ]
         }
       ]
+    },
+    {
+      "description": "en-mark to backslash",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "international3"
+          },
+          "to": [
+            {
+              "key_code": "international3",
+              "modifiers": ["option"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "international3",
+            "modifiers": { "mandatory": ["option"] }
+          },
+          "to": [
+            {
+              "key_code": "international3"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
