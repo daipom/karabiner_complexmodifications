@@ -476,6 +476,23 @@
           ]
         }
       ]
+    },
+    {
+      "description": "SPACE to ENTER",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": { "mandatory": ["right_shift"] }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
